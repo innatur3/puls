@@ -36,20 +36,26 @@
                 <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
 
                 <div class="promo__icons">
-                    <div class="promo__icon">
+                    <div class="promo__icon promo__icon_timer">
                         <img src="icons/Timer.png" alt="Timer">
                         Время подбора: 
                         10 минут
                     </div>
-                    <div class="promo__icon">
+                    <div class="promo__icon promo__icon_cart">
                         <img src="icons/Cart.png" alt="Cart">
                         Бесплатная 
                         доставка 
                     </div>
-                    <div class="promo__icon">
+                    <div class="promo__icon promo__icon_messages">
                         <img src="icons/Messages.png" alt="Messages">
                         Ответим 
                         на все вопросы
+                    </div>
+                    <div class="promo__icon promo__icon_phone">
+                        <img src="icons/phone.png" alt="Phone">
+                        <button class="button button_phone">
+                        Заказать звонок
+                        </button>
                     </div>
                 </div>
 
@@ -88,15 +94,17 @@
 
     <div class="consultation">
         <div class="container">
-            <h2>Получите бесплатную консультацию <br>по подбору пульсометра </h2>
-            <h3>Просто заполните форму заявки <br>и мы перезвоним вам в течении 10 минут</h3>
-            <form>
-                <input type="name" id="name" placeholder="Ваше имя">
-                <input type="tel" id="tel" placeholder="Ваш телефон">
-                <input type="email" id="email" placeholder="Ваш E-mail">
-                <button class="button button_main button_second">заказать консультацию</button>
+            <h2 class="consultation__header">Получите бесплатную консультацию <br>по подбору пульсометра </h2>
+            <h3 class="consultation__subheader">Просто заполните форму заявки <br>и мы перезвоним вам в течении 10 минут</h3>
+            
+            <form class="consultation__form">
+                <input class="consultation__input" type="name" id="name" placeholder="Ваше имя">
+                <input class="consultation__input" type="tel" id="tel" placeholder="Ваш телефон">
+                <input class="consultation__input"type="email" id="email" placeholder="Ваш E-mail">
+                <button class="button button_second">заказать консультацию</button>
             </form>
         </div>
     </div>
+
 </body>     
 </html>
