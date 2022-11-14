@@ -1,17 +1,26 @@
-$(document).ready(function(){
-    $('.carousel__inner').slick({
-        speed: 300,
-        adaptiveHieght: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/chevron-left-solid.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/chevron-right-solid.png"></button>',
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    dots: true
-                }
-            }
-        ]
-    });
+  const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    nav: false,
+    controls: false, 
+    mouseDrag: true,
+    responsive: {
+        992:{
+            nav: false,
+        },
+        300: {
+            nav: true,
+        }
+      }
+    }
+    );
+
+  document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+  });
+
+  document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
   });
