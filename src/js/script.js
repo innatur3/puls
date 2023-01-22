@@ -70,4 +70,39 @@
       })
     });
 
+
+
+    function validateForms(form){
+      $(form).validate({
+        rules:{
+          name:{
+            required: true,
+            minlength: 2
+          },
+          phone:"required",
+          email:{
+            required: true,
+            email: true
+          }
+        },
+        
+        messages: {
+          name:{
+            required: "Пожалуйста, введите свое имя",
+            minlength: jQuery.validator.format("Введите {0} символова!")
+          },
+          phone: "Пожалуйста, введите свой номер телефона",
+          email: {
+            required: "Пожалуйста, введите свою почту",
+            email: "Неправельно введен адресс почты"
+          }
+        }
+  
+      });
+    };
+
+    validateForms('#consult-form');
+    validateForms('#consult form');
+    validateForms('#order form');
+    
   })(jQuery);
