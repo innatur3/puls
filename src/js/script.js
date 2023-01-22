@@ -104,5 +104,7 @@
     validateForms('#consult-form');
     validateForms('#consult form');
     validateForms('#order form');
+
+    $('input[name=phone]').mask("(+7) 999-9999");
     
   })(jQuery);
