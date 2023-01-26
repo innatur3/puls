@@ -25,7 +25,22 @@
     slider.goTo('next');
   });
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   (function($) {
+    wow = new WOW(
+      {
+      boxClass:     'wow',      // default
+      animateClass: 'animate__animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+    )
+    wow.init();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     $(function() {
       
       $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -36,6 +51,7 @@
       
     });
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     function toggleSlise(item){
       $(item).each(function(i){
@@ -50,6 +66,7 @@
     toggleSlise('.catalog-item__link');
     toggleSlise('.catalog-item__back');
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //modal
 
@@ -70,6 +87,7 @@
       })
     });
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     function validateForms(form){
@@ -101,6 +119,9 @@
       });
     };
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     validateForms('#consult-form');
     validateForms('#consult form');
     validateForms('#order form');
@@ -123,6 +144,8 @@
       return false;
     });
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     // Smooth scroll and pageup
 
     $(window).scroll(function() {
@@ -131,12 +154,12 @@
       } else {
           $('.pageup').fadeOut();
       }
-  });
+    });
 
   $("a[href=#up]").click(function(){
       const _href = $(this).attr("href");
       $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
       return false;
   });
-    
+
   })(jQuery);
