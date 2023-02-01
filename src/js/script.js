@@ -93,7 +93,7 @@
     function validateForms(form){
       $(form).validate({
         rules:{
-          name:{
+          fname:{
             required: true,
             minlength: 2
           },
@@ -105,7 +105,7 @@
         },
         
         messages: {
-          name:{
+          fname:{
             required: "Пожалуйста, введите свое имя",
             minlength: jQuery.validator.format("Введите {0} символова!")
           },
@@ -156,10 +156,10 @@
       }
     });
 
-  $("a[href=#up]").click(function(){
+    $("a[href^='#up']").click(function(){
       const _href = $(this).attr("href");
       $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
       return false;
-  });
+    });
 
   })(jQuery);
