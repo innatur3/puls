@@ -1,4 +1,4 @@
-# I creade this site too lern how to use PHP and JavaScripts skripts
+I created this site too lern how to use PHP and JavaScript scripts
 
 # Technologies Used:
 * HTML
